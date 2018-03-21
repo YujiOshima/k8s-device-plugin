@@ -29,7 +29,7 @@ RUN export CGO_LDFLAGS_ALLOW='-Wl,--unresolved-symbols=ignore-in-object-files' &
 FROM debian:stretch-slim
 
 ENV NVIDIA_VISIBLE_DEVICES=all
-ENV NVIDIA_DRIVER_CAPABILITIES=utility
+ENV NVIDIA_DRIVER_CAPABILITIES=all
 
 COPY --from=build /go/bin/nvidia-device-plugin /usr/bin/nvidia-device-plugin
 
